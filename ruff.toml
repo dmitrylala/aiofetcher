@@ -1,0 +1,24 @@
+select = ["E", "F", "B", "I", "N", "A", "COM", "C4", "EXE", "ISC", "PIE", "PT", "Q",
+		"RSE", "RET", "SIM", "TID", "ARG", "PD", "PL", "NPY", "RUF",
+]
+
+line-length = 100
+fix = false
+show-source = true
+target-version = "py38"
+
+# Avoid trying to fix flake8-bugbear (`B`) violations.
+unfixable = ["B"]
+
+namespace-packages = ["aiofetcher"]
+
+[per-file-ignores]
+# Ignore 'F401' (unused-import) in all '__init__.py' files.
+"__init__.py" = ["F401"]
+
+[pydocstyle]
+convention = "google"
+
+[pylint]
+max-args = 7
+allow-magic-value-types = ["int", "str", "bytes", "float"]
