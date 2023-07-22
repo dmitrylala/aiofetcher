@@ -10,11 +10,14 @@ packages = [{include = "aiofetcher"}]
 python = "^3.8"
 aiohttp = "^3.8.5"
 
-
 [tool.poetry.group.dev.dependencies]
 black = ">=23.3.0"
 ruff = ">=0.0.261"
 pre-commit = ">=3.2.2"
+
+[tool.poetry.scripts]
+# working with datasets, markers and queries
+aiofetcher = "aiofetcher.__main__:main"
 
 [tool.black]
 line-length = 100
