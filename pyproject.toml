@@ -7,7 +7,7 @@ readme = "README.md"
 packages = [{include = "aiofetcher"}]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.8,<4"
 aiohttp = "^3.8.5"
 
 [tool.poetry.group.dev.dependencies]
